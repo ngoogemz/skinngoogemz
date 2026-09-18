@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ngoo GEMz - Shop Tặng Trang Phục Tốc Chiến</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gaming: {
+                            dark: '#0a0a0a', 
+                            card: '#171717', 
+                            primary: '#f97316', // Orange 500
+                            secondary: '#ea580c', // Orange 600
+                            accent: '#fbbf24'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+        
+        @keyframes metallic-glow {
+            0% { 
+                text-shadow: 0 0 5px rgba(249,115,22,0.5), 0 0 10px rgba(249,115,22,0.5); 
+                color: #ea580c; 
+            }
+            50% { 
+                text-shadow: 0 0 10px #fbbf24, 0 0 20px #f97316, 0 0 30px #ea580c; 
+                color: #fef08a; 
+            }
+            100% { 
+                text-shadow: 0 0 5px rgba(249,115,22,0.5), 0 0 10px rgba(249,115,22,0.5); 
+                color: #ea580c; 
+            }
+        }
+        .animate-metallic-glow {
+            animation: metallic-glow 2.5s infinite alternate ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gaming-dark text-slate-200 font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-gaming-dark/90 backdrop-blur-md border-b border-gaming-primary/30 shadow-lg shadow-gaming-primary/10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <h1 class="text-3xl font-heading font-bold tracking-wider text-white">
+                    ngoo <span class="text-gaming-primary">GEMz</span>
+                </h1>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#home" class="hover:text-gaming-primary transition-colors">Trang chủ</a>
+                <a href="#products" class="hover:text-gaming-primary transition-colors">Sản phẩm</a>
+                <a href="#guide" class="hover:text-gaming-primary transition-colors">Hướng dẫn</a>
+                <a href="#contact" class="hover:text-gaming-primary transition-colors">Liên hệ</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-gaming-card hover:bg-slate-700 border border-gaming-primary/50 text-gaming-primary rounded-full px-5 py-2 font-bold transition-all shadow-[0_0_10px_rgba(249,115,22,0.2)] hover:shadow-[0_0_15px_rgba(249,115,22,0.5)]">
+                    ORDER
+                </a>
+            </div>
+
+            <button class="md:hidden text-2xl text-gaming-primary hover:text-white" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobileMenu" class="hidden md:hidden bg-gaming-card border-t border-slate-700">
+            <nav class="flex flex-col p-4 gap-4">
+                <a href="#home" class="hover:text-gaming-primary">Trang chủ</a>
+                <a href="#products" class="hover:text-gaming-primary">Sản phẩm</a>
+                <a href="#guide" class="hover:text-gaming-primary">Hướng dẫn</a>
+                <a href="#contact" class="hover:text-gaming-primary">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="home" class="relative overflow-hidden py-20 lg:py-32 bg-gaming-dark">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-br from-gaming-primary/10 via-gaming-dark to-gaming-dark"></div>
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gaming-primary/20 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10 text-center flex flex-col items-center">
+                
+                <span class="px-4 py-1.5 rounded-full bg-gaming-primary/20 text-gaming-primary border border-gaming-primary/50 text-sm font-semibold mb-6 animate-pulse">
+                    <i class="fa-solid fa-fire mr-2"></i>UY TÍN - NHANH CHÓNG - BẢO MẬT
+                </span>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-heading font-bold mb-8 leading-snug md:leading-tight max-w-3xl">
+                    SỞ HỮU SKIN CỰC CHẤT <span class="block mt-3 md:mt-5 text-gaming-primary drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]"> Mềm hơn so với NẠP THẲNG lên đến 40% </span>
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg md:text-xl mb-10 max-w-2xl px-4 md:px-0">
+                    Nâng tầm trải nghiệm game của bạn với những Skin, Wild Pass và Keys tuyệt đẹp với hình thức ORDER vô cùng đơn giản.
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 w-full px-4 sm:px-0">
+                    <a href="#products" class="w-full sm:w-auto px-8 py-3.5 bg-gaming-primary hover:bg-orange-500 text-white rounded-lg font-bold text-lg transition-transform hover:-translate-y-1 shadow-[0_0_20px_rgba(249,115,22,0.4)] flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> THAM KHẢO NGAY
+                    </a>
+                    <a href="#guide" class="w-full sm:w-auto px-8 py-3.5 bg-transparent border-2 border-gaming-primary text-gaming-primary hover:bg-gaming-primary hover:text-white rounded-lg font-bold text-lg transition-all hover:-translate-y-1 shadow-[0_0_15px_rgba(249,115,22,0.2)] hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> CÁCH TẶNG SKIN
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-20 bg-gaming-dark relative z-10">
+            <div class="container mx-auto px-4">
+                
+                <!-- Mục Trang Phục -->
+                <div class="mb-16">
+                    <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-shirt text-3xl text-gaming-primary"></i>
+                        <h3 class="text-3xl font-heading font-bold text-white">TRANG PHỤC</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Skin 1325 -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <div class="w-16 h-16 mx-auto mt-2 mb-4 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600 group-hover:border-gaming-primary group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all">
+                                <i class="fa-solid fa-gem text-2xl text-amber-500 group-hover:text-gaming-primary drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]"></i>
+                            </div>
+                            <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-gaming-primary transition-colors">Skin 1.325 WC</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">185 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                        
+                        <!-- Skin 990 -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <div class="w-16 h-16 mx-auto mt-2 mb-4 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600 group-hover:border-gaming-primary group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all">
+                                <i class="fa-solid fa-gem text-2xl text-purple-400 group-hover:text-gaming-primary drop-shadow-[0_0_8px_rgba(192,132,252,0.6)]"></i>
+                            </div>
+                            <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-gaming-primary transition-colors">Skin 990 WC</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">145 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+
+                        <!-- Skin 725 -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <div class="w-16 h-16 mx-auto mt-2 mb-4 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600 group-hover:border-gaming-primary group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all">
+                                <i class="fa-solid fa-star text-2xl text-slate-400 group-hover:text-gaming-primary"></i>
+                            </div>
+                            <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-gaming-primary transition-colors">Skin 725 WC</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">115 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+
+                        <!-- Skin 525 -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <div class="w-16 h-16 mx-auto mt-2 mb-4 rounded-full bg-slate-800 flex items-center justify-center border border-slate-600 group-hover:border-gaming-primary group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all">
+                                <i class="fa-solid fa-meteor text-2xl text-slate-400 group-hover:text-gaming-primary"></i>
+                            </div>
+                            <h4 class="text-xl font-heading font-bold text-white mb-2 group-hover:text-gaming-primary transition-colors">Skin 525 WC</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">95 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-ticket text-3xl text-gaming-primary"></i>
+                        <h3 class="text-3xl font-heading font-bold text-white">WILD PASS</h3>
+                    </div>
+                    
+                    <!-- Wild Pass Lớn -->
+                    <h4 class="text-xl font-bold text-slate-300 mb-4 border-l-4 border-gaming-primary pl-3">Wild Pass Lớn</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-gaming-primary/50 relative overflow-hidden group flex flex-col h-full text-center hover:-translate-y-2 transition-transform duration-300">
+                            <div class="absolute top-0 right-0 bg-gaming-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md">COMBO Mua Nhiều</div>
+                            <h4 class="text-xl font-heading font-bold text-white mt-4 mb-2 group-hover:text-gaming-primary transition-colors">Promax</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">195 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-gaming-primary hover:bg-orange-500 text-white rounded-xl font-bold transition-all shadow-[0_0_15px_rgba(249,115,22,0.3)]">Mua Ngay</button>
+                        </div>
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-4 mb-2 group-hover:text-gaming-primary transition-colors">VIP</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">145 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-4 mb-2 group-hover:text-gaming-primary transition-colors">Thường</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">75 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                    </div>
+
+                    <!-- Wild Pass Nhỏ (Căn giữa hoàn hảo) -->
+                    <h4 class="text-xl font-bold text-slate-300 mb-4 border-l-4 border-gaming-primary pl-3 mt-10">Wild Pass Nhỏ</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto gap-6">
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">VIP</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">90 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">Thường</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">70 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-key text-3xl text-gaming-primary"></i>
+                        <h3 class="text-3xl font-heading font-bold text-white">CHÌA KHÓA HEXTECH</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">50 Chìa</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">125 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                        
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">100 Chìa</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">225 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">200 Chìa</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">425 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-gaming-primary/50 relative overflow-hidden group flex flex-col h-full text-center hover:-translate-y-2 transition-transform duration-300">
+                            <div class="absolute top-0 right-0 bg-gaming-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">SIÊU HỜI</div>
+                            <h4 class="text-xl font-heading font-bold text-white mt-4 mb-2 group-hover:text-gaming-primary transition-colors">500 Chìa</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">1.050 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-gaming-primary hover:bg-orange-500 text-white rounded-xl font-bold transition-all shadow-[0_0_15px_rgba(249,115,22,0.3)]">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mục Các Vật Phẩm Khác -->
+                <div class="mt-16">
+                    <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-box-open text-3xl text-gaming-primary"></i>
+                        <h3 class="text-3xl font-heading font-bold text-white">CÁC VẬT PHẨM KHÁC</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Skin thức tỉnh -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">Skin thức tỉnh 1100 WC</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">160 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                        
+                        <!-- Khung skin -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">Khung skin</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">60 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+
+                        <!-- Tư thế xịn -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">Tư thế xịn</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">70 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+
+                        <!-- Tư thế cùi -->
+                        <div class="bg-gaming-card/90 rounded-2xl p-6 shadow-lg border border-slate-700 hover:border-gaming-primary hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full text-center">
+                            <h4 class="text-xl font-heading font-bold text-white mt-2 mb-2 group-hover:text-gaming-primary transition-colors">Tư thế cùi</h4>
+                            <div class="mb-6 mt-auto">
+                                <span class="text-gaming-primary font-bold text-4xl drop-shadow-[0_0_10px_rgba(249,115,22,0.3)]">40 🐟</span>
+                            </div>
+                            <button onclick="showModal('Vui lòng kéo xuống phần Liên Hệ để nhắn tin cho Fanpage hoặc Zalo đặt hàng nhé!')" class="w-full py-3 bg-slate-800 hover:bg-gaming-primary text-white border border-slate-600 hover:border-transparent rounded-xl font-bold transition-all">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="guide" class="py-20 bg-[#111111] border-t border-slate-800 relative z-10 shadow-[inset_0_10px_30px_rgba(0,0,0,0.5)]">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-heading font-bold flex items-center justify-center gap-3 mb-4 uppercase text-white">
+                        <i class="fa-solid fa-book-open text-gaming-primary"></i> 
+                        HƯỚNG DẪN TẶNG QUÀ
+                    </h3>
+                    <p class="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
+                        Để nhận được skin, wildpass, keys,... Bạn cần phải add ID bên <span class="font-bold text-gaming-primary">ngoo GEMz</span> và đợi <strong class="text-gaming-accent">14 ngày</strong> cho lần tặng đầu tiên (Đây là quy định Riot).
+                    </p>
+                </div>
+
+                <div class="text-center mb-10 p-5 bg-gaming-dark/80 rounded-xl border border-gaming-primary/40 shadow-[0_0_20px_rgba(249,115,22,0.15)] relative overflow-hidden group">
+                    <h4 class="text-xl md:text-2xl font-heading font-bold animate-metallic-glow tracking-wider relative z-10 uppercase">
+                        VUI LÒNG ADDFRIEND ĐỦ 10 ID ĐỂ TRÁNH CHẬM ĐƠN SAU NÀY
+                    </h4>
+                </div>
+
+                <div class="bg-gaming-dark/90 rounded-2xl p-6 md:p-8 border border-slate-700 shadow-xl mb-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4" id="idList">
+                        <!-- Render danh sách ID qua JS -->
+                    </div>
+                </div>
+
+                <div class="text-center p-5 bg-gaming-card rounded-xl border border-slate-700 flex flex-col md:flex-row items-center justify-center gap-4 hover:border-gaming-accent/50 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-gaming-accent/20 flex items-center justify-center flex-shrink-0 shadow-[0_0_15px_rgba(251,191,36,0.3)]">
+                        <i class="fa-solid fa-bell text-gaming-accent text-2xl animate-bounce"></i>
+                    </div>
+                    <p class="text-slate-300 text-lg md:text-left">
+                        Sau khi add xong báo <strong class="text-gaming-primary text-xl uppercase">ngoo GEMz</strong> để được accept và tiến hành thời gian chờ nhé!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-[#050505] border-t border-slate-800 pt-16 pb-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-6">
+                <h2 class="text-3xl font-heading font-bold text-white">ngoo <span class="text-gaming-primary">GEMz</span></h2>
+            </div>
+            <p class="text-slate-400 mb-8 text-sm leading-relaxed max-w-lg mx-auto">
+                Chuyên "TẶNG" các trang phục, Wild Pass Tốc Chiến với giá ưu đãi nhất thị trường. Uy tín tạo nên thương hiệu.
+            </p>
+            <div class="flex justify-center flex-wrap gap-4 mb-8">
+                <!-- Facebook Fanpage Link -->
+                <a href="https://www.facebook.com/ngoogemz" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#1877F2] hover:bg-blue-600 text-white rounded-lg font-bold flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(24,119,242,0.4)] hover:-translate-y-1">
+                    <i class="fa-brands fa-facebook-f text-xl"></i> Fanpage Facebook
+                </a>
+                <!-- Zalo Hỗ Trợ Link -->
+                <a href="https://zalo.me/0934700386" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#0088FF] hover:bg-blue-500 text-white rounded-lg font-bold flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(0,136,255,0.4)] hover:-translate-y-1">
+                    <i class="fa-solid fa-comment-dots text-xl"></i> Zalo/Call: 0934.700.386
+                </a>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 mt-8 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2024 ngoo GEMz. All rights reserved.</p>
+                <p class="text-xs">Đã hoạt động hơn 3 năm và đặt chất lượng lên hàng đầu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="customModal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-gaming-card border border-gaming-primary/50 rounded-xl p-6 max-w-sm w-full mx-4 shadow-[0_0_30px_rgba(249,115,22,0.2)] transform scale-90 transition-transform duration-300" id="modalContent">
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-gaming-primary/20 flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-circle-info text-3xl text-gaming-primary"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2" id="modalTitle">Thông báo</h3>
+                <p class="text-slate-400 mb-6" id="modalMessage">Nội dung thông báo ở đây.</p>
+                <div class="flex gap-3 justify-center">
+                    <button onclick="closeModal()" class="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors font-semibold">Đóng</button>
+                    <a href="#contact" onclick="closeModal()" class="px-6 py-2 bg-gaming-primary hover:bg-orange-600 text-white rounded-lg transition-colors font-semibold shadow-[0_0_10px_rgba(249,115,22,0.3)]">Liên Hệ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('customModal');
+        const modalContent = document.getElementById('modalContent');
+        const modalMessage = document.getElementById('modalMessage');
+
+        function showModal(message) {
+            modalMessage.textContent = message;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-90');
+            modalContent.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-90');
+        }
+
+        // Danh sách 11 IDs
+        const riotIds = [
+           
+            "ngoogemz91#0000", 
+            "ngoogemz92#0000", "ngoogemz93#0000", "ngoogemz94#0000",
+            "ngoogemz95#0000", "ngoogemz96#0000", "ngoogemz97#0000",
+            "ngoogemz98#0000", "ngoogemz99#0000", "ngoogemz100#0000"
+        ];
+
+        function renderIdList() {
+            const idListContainer = document.getElementById('idList');
+            if(!idListContainer) return;
+            
+            riotIds.forEach(id => {
+                const div = document.createElement('div');
+                div.className = "flex items-center justify-between p-3 bg-gaming-card rounded-lg border border-slate-700 hover:border-gaming-primary/50 transition-colors group";
+                div.innerHTML = `
+                    <div class="flex items-center gap-3 overflow-hidden">
+                        <i class="fa-solid fa-id-card text-gaming-primary group-hover:text-gaming-accent transition-colors"></i>
+                        <span class="text-slate-200 font-mono font-semibold truncate">${id}</span>
+                    </div>
+                    <button onclick="copyToClipboard('${id}', this)" class="shrink-0 px-4 py-1.5 bg-slate-700 hover:bg-gaming-primary text-slate-200 text-sm font-semibold rounded-md transition-all flex items-center gap-2 group-hover:shadow-[0_0_10px_rgba(249,115,22,0.3)]">
+                        <i class="fa-regular fa-copy"></i> Sao chép
+                    </button>
+                `;
+                idListContainer.appendChild(div);
+            });
+        }
+
+        function copyToClipboard(text, btnElement) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const originalHTML = '<i class="fa-regular fa-copy"></i> Sao chép';
+            btnElement.innerHTML = '<i class="fa-solid fa-check"></i> Đã chép';
+            btnElement.classList.replace('bg-slate-700', 'bg-gaming-primary');
+            btnElement.classList.replace('hover:bg-gaming-primary', 'hover:bg-orange-600');
+            btnElement.classList.replace('text-slate-200', 'text-white');
+
+            setTimeout(() => {
+                btnElement.innerHTML = originalHTML;
+                btnElement.classList.replace('bg-gaming-primary', 'bg-slate-700');
+                btnElement.classList.replace('hover:bg-orange-600', 'hover:bg-gaming-primary');
+                btnElement.classList.replace('text-white', 'text-slate-200');
+            }, 2000);
+        }
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderIdList(); 
+        });
+    </script>
+</body>
+</html>
